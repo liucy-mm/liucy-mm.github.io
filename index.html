@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>给女朋友的惊喜 - 送花动画</title>
+    <title>逆战未来代肝服务</title>
     <style>
-        /* 全局样式 */
         * {
             margin: 0;
             padding: 0;
@@ -13,731 +12,469 @@
         }
         
         body {
-            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #0f3460 70%, #1a1a2e 100%);
+            color: #fff;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             overflow-x: hidden;
-            color: #333;
         }
         
-        /* 容器样式 */
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
             text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .hero {
+            position: relative;
+            height: 500px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 90%;
-            position: relative;
             overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
         }
         
-        /* 标题样式 */
-        .title {
-            font-size: 2.5rem;
-            color: #e91e63;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            animation: pulse 2s infinite;
-        }
-        
-        /* 消息样式 */
-        .message {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #666;
-        }
-        
-        /* 按钮样式 */
-        .send-btn {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-        
-        .send-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
-        }
-        
-        .send-btn:active {
-            transform: translateY(-1px);
-        }
-        
-        /* 花朵容器 */
-        .flower-container {
-            position: relative;
-            min-height: 300px;
-            margin-top: 2rem;
-            overflow: hidden;
-        }
-        
-        /* 消息容器 */
-        .message-container {
-            margin-top: 2rem;
-            min-height: 50px;
-            font-size: 1.2rem;
-            color: #e91e63;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        
-        .message-container.show {
-            opacity: 1;
-        }
-        
-        /* 花朵样式 - 使用CSS绘制玫瑰 */
-        .flower {
-            position: absolute;
-            transform-origin: center;
-        }
-        
-        /* 花朵小文字样式 */
-        .flower-text {
-            position: absolute;
-            font-size: 12px;
-            color: #e91e63;
-            font-weight: bold;
-            white-space: nowrap;
-            opacity: 0;
-            animation: fadeInUp 2s ease-out forwards;
-            pointer-events: none;
-            z-index: 10;
-        }
-        
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px) scale(0.8);
-            }
-            30% {
-                opacity: 1;
-                transform: translateY(-10px) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-50px) scale(1);
-            }
-        }
-        
-        .rose {
-            width: 40px;
-            height: 40px;
-            position: relative;
-        }
-        
-        .rose-petal {
-            position: absolute;
+        .hero img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #ff99cc, #ff3366);
-            animation: bloom 2s ease-out forwards;
+            object-fit: cover;
+            filter: brightness(0.7);
         }
         
-        .rose-center {
+        .hero-content {
             position: absolute;
-            width: 50%;
-            height: 50%;
-            top: 25%;
-            left: 25%;
-            border-radius: 50%;
-            background: #ff0066;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
             z-index: 2;
         }
         
-        .rose-leaf {
-            position: absolute;
-            width: 30px;
-            height: 20px;
-            background: #4caf50;
-            border-radius: 50% 0 50% 0;
-            transform: rotate(-45deg);
-            top: 45px;
-            left: 10px;
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+            animation: glow 2s ease-in-out infinite alternate;
         }
         
-        /* 花瓣动画 */
-        @keyframes bloom {
-            0% {
-                opacity: 0;
-                transform: scale(0);
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
             }
-            100% {
-                opacity: 1;
-                transform: scale(1);
+            to {
+                text-shadow: 0 0 30px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 0.8);
             }
         }
         
-        /* 标题脉冲动画 */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
         }
         
-        /* 飘落动画 - 更自然的飘动路径 */
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg) translateX(0);
-                opacity: 1;
-            }
-            25% {
-                transform: translateY(-25vh) rotate(90deg) translateX(20px);
-            }
-            50% {
-                transform: translateY(-50vh) rotate(180deg) translateX(-30px);
-            }
-            75% {
-                transform: translateY(-75vh) rotate(270deg) translateX(15px);
-            }
-            100% {
-                transform: translateY(-100vh) rotate(360deg) translateX(0);
-                opacity: 0;
-            }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
         }
         
-        /* 爱心动画 */
-        .heart {
-            position: absolute;
-            background-color: #e91e63;
-            height: 20px;
-            width: 20px;
-            transform: rotate(45deg);
-            animation: floatHeart 3s ease-in-out;
+        .service-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(255, 105, 180, 0.05));
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
-        .heart:before,
-        .heart:after {
-            content: '';
-            background-color: #e91e63;
-            border-radius: 50%;
-            height: 20px;
-            width: 20px;
-            position: absolute;
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3), 0 0 20px rgba(255, 105, 180, 0.2);
+            border-color: rgba(0, 255, 255, 0.5);
         }
         
-        .heart:before {
-            top: -10px;
-            left: 0;
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #00ffff;
         }
         
-        .heart:after {
-            top: 0;
-            left: -10px;
+        .service-prices {
+            margin-top: 20px;
         }
         
-        @keyframes floatHeart {
-            0% {
-                transform: rotate(45deg) scale(0);
-                opacity: 1;
-            }
-            20% {
-                transform: rotate(45deg) scale(1);
-            }
-            50% {
-                transform: rotate(45deg) translateY(-200px) scale(1);
-            }
-            100% {
-                transform: rotate(45deg) translateY(-600px) scale(1);
-                opacity: 0;
-            }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
         
-        /* 响应式设计 */
+        .price-item span:first-child {
+            font-weight: bold;
+        }
+        
+        .price-item span:last-child {
+            font-weight: bold;
+        }
+        
+        /* 大都会颜色 */
+        .map-daduhui .price-item {
+            background: linear-gradient(90deg, rgba(0, 255, 255, 0.05), rgba(0, 255, 255, 0.1));
+            border-left: 3px solid rgba(0, 255, 255, 0.5);
+        }
+        
+        .map-daduhui .price-item:hover {
+            background: linear-gradient(90deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.2));
+            transform: translateX(5px);
+            border-left: 3px solid rgba(0, 255, 255, 0.8);
+        }
+        
+        .map-daduhui .price-item span:last-child {
+            color: #00ffff;
+        }
+        
+        /* 复活节颜色 */
+        .map-fuhuojie .price-item {
+            background: linear-gradient(90deg, rgba(255, 105, 180, 0.05), rgba(255, 105, 180, 0.1));
+            border-left: 3px solid rgba(255, 105, 180, 0.5);
+        }
+        
+        .map-fuhuojie .price-item:hover {
+            background: linear-gradient(90deg, rgba(255, 105, 180, 0.1), rgba(255, 105, 180, 0.2));
+            transform: translateX(5px);
+            border-left: 3px solid rgba(255, 105, 180, 0.8);
+        }
+        
+        .map-fuhuojie .price-item span:last-child {
+            color: #ff69b4;
+        }
+        
+        /* 冰点颜色 */
+        .map-bingdian .price-item {
+            background: linear-gradient(90deg, rgba(135, 206, 250, 0.05), rgba(135, 206, 250, 0.1));
+            border-left: 3px solid rgba(135, 206, 250, 0.5);
+        }
+        
+        .map-bingdian .price-item:hover {
+            background: linear-gradient(90deg, rgba(135, 206, 250, 0.1), rgba(135, 206, 250, 0.2));
+            transform: translateX(5px);
+            border-left: 3px solid rgba(135, 206, 250, 0.8);
+        }
+        
+        .map-bingdian .price-item span:last-child {
+            color: #87cefa;
+        }
+        
+        /* 精绝颜色 */
+        .map-jingjue .price-item {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.05), rgba(255, 215, 0, 0.1));
+            border-left: 3px solid rgba(255, 215, 0, 0.5);
+        }
+        
+        .map-jingjue .price-item:hover {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.2));
+            transform: translateX(5px);
+            border-left: 3px solid rgba(255, 215, 0, 0.8);
+        }
+        
+        .map-jingjue .price-item span:last-child {
+            color: #ffd700;
+        }
+        
+        /* 昆仑颜色 */
+        .map-kunlun .price-item {
+            background: linear-gradient(90deg, rgba(143, 188, 143, 0.05), rgba(143, 188, 143, 0.1));
+            border-left: 3px solid rgba(143, 188, 143, 0.5);
+        }
+        
+        .map-kunlun .price-item:hover {
+            background: linear-gradient(90deg, rgba(143, 188, 143, 0.1), rgba(143, 188, 143, 0.2));
+            transform: translateX(5px);
+            border-left: 3px solid rgba(143, 188, 143, 0.8);
+        }
+        
+        .map-kunlun .price-item span:last-child {
+            color: #8fbc8f;
+        }
+        
+        .info-section {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(255, 105, 180, 0.05));
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .info-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+        
+        .info-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 40px;
+        }
+        
+        .game-info {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(255, 105, 180, 0.05));
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .game-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00ffff;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+        
+        .game-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
         @media (max-width: 768px) {
-            .title {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .hero {
+                height: 300px;
+            }
+            
+            .service-card {
+                padding: 20px;
+            }
+            
+            .info-section {
+                padding: 20px;
+            }
+            
+            .info-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .info-section p {
+                font-size: 1rem;
+            }
+            
+            .game-info {
+                padding: 20px;
+            }
+            
+            .game-info h2 {
+                font-size: 1.5rem;
+            }
+            
+            .game-info p {
+                font-size: 1rem;
+            }
+            
+            .footer {
+                padding: 15px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
                 font-size: 2rem;
             }
             
-            .send-btn {
-                padding: 0.8rem 1.5rem;
+            h2 {
+                font-size: 1.2rem !important;
+            }
+            
+            .subtitle {
                 font-size: 1rem;
             }
             
-            .message {
-                font-size: 1rem;
+            .hero {
+                height: 250px;
             }
             
-            .rose {
-                width: 30px;
-                height: 30px;
+            .service-card h3 {
+                font-size: 1.5rem;
             }
             
-            .flower-container {
-                min-height: 200px;
+            .price-item {
+                font-size: 0.9rem;
             }
-        }
-        
-        /* 平滑滚动 */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* 预加载样式 */
-        .container {
-            animation: fadeIn 1s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            
+            .footer {
+                font-size: 0.8rem;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="title">给我亲爱的</h1>
-        <div class="message">点击下方按钮，为你送上最美的花朵</div>
-        <button id="sendFlowersBtn" class="send-btn">送花给你 ❤️</button>
-        <div id="flowerContainer" class="flower-container"></div>
-        <div id="messageContainer" class="message-container"></div>
+        <header>
+            <div class="hero">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=逆战未来游戏场景%20科幻风格%20战斗画面%20高清&image_size=landscape_16_9" alt="逆战未来游戏场景">
+                <div class="hero-content">
+                    <h1>逆战未来代肝</h1>
+                    <h2 style="font-size: 2rem; margin-bottom: 20px; text-shadow: 0 0 20px rgba(0, 255, 255, 0.8); animation: glow 2s ease-in-out infinite alternate;">凉城落叶</h2>
+                    <p class="subtitle">纯手打，可直播代肝</p>
+                </div>
+            </div>
+        </header>
+        
+        <div class="game-info">
+            <h2>关于逆战未来</h2>
+            <p>《逆战:未来》是琳琅天上出品的“逆战”IP续作，于2026年1月13日正式全平台上线。开服前，官方预约人数即突破4000万，游戏开服后更是火速登上iOS免费榜榜首。</p>
+            <p>游戏以未来科幻为背景，拥有丰富的武器系统和战甲协同机制，玩家可以通过不同的武器插件搭配和战甲协同来提升战斗力。游戏支持多种模式，包括PVE副本和PVP对战。</p>
+            <p>武器是《逆战未来》的战力核心，新手可以通过免费、易获取的史诗武器，做好基础养成，轻松通关普通难度。游戏每天十分钟不到就能打完所有日常，适合各种类型的玩家。</p>
+        </div>
+        
+        <div class="services">
+            <div class="service-card map-daduhui">
+                <h3>大都会</h3>
+                <div class="service-prices">
+                    <div class="price-item">
+                        <span>英雄</span>
+                        <span>2元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>炼狱</span>
+                        <span>3元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>折磨</span>
+                        <span>4元</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card map-fuhuojie">
+                <h3>复活节</h3>
+                <div class="service-prices">
+                    <div class="price-item">
+                        <span>英雄</span>
+                        <span>3元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>炼狱</span>
+                        <span>4元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>折磨</span>
+                        <span>5元</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card map-bingdian">
+                <h3>冰点</h3>
+                <div class="service-prices">
+                    <div class="price-item">
+                        <span>英雄</span>
+                        <span>3元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>炼狱</span>
+                        <span>4元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>折磨</span>
+                        <span>5元</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card map-jingjue">
+                <h3>精绝</h3>
+                <div class="service-prices">
+                    <div class="price-item">
+                        <span>英雄</span>
+                        <span>4元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>炼狱</span>
+                        <span>5元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>折磨</span>
+                        <span>6元</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card map-kunlun">
+                <h3>昆仑</h3>
+                <div class="service-prices">
+                    <div class="price-item">
+                        <span>英雄</span>
+                        <span>4元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>炼狱</span>
+                        <span>5元</span>
+                    </div>
+                    <div class="price-item">
+                        <span>折磨</span>
+                        <span>6元</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2>服务优势</h2>
+            <p>大学生诚信带肝，纯绿代打，可包武器价格可商议</p>
+            <p>支持直播代肝，让您全程监督，安全放心</p>
+            <p>纯手打，不使用任何辅助工具，保证账号安全</p>
+            <p>价格合理，服务专业，效率高，让您轻松获取游戏资源</p>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2026 逆战未来代肝服务 | 联系我们获取更多详情 vx:guang2095981846</p>
+        </footer>
     </div>
 
-    <script>
-        // DOM元素
-        const sendFlowersBtn = document.getElementById('sendFlowersBtn');
-        const flowerContainer = document.getElementById('flowerContainer');
-        const messageContainer = document.getElementById('messageContainer');
-        
-        // 浪漫消息数组
-        const romanticMessages = [
-            '我对你的爱，如同繁星点点，永不熄灭。',
-            '你是我生命中最美的风景。',
-            '每一天有你在，都是幸福的。',
-            '我爱你，不仅仅是今天，而是余生的每一天。',
-            '你是我的阳光，温暖了我的整个人生。',
-            '遇见你，是我最大的幸运。',
-            '和你在一起的每一刻，都是珍贵的回忆。',
-            '我会一直爱你，直到时间的尽头。',
-            '你是我生命中最重要的人。',
-            '有你在，便是最好的时光。'
-        ];
-        
-        // 生成随机数
-        function getRandom(min, max) {
-            return Math.random() * (max - min) + min;
-        }
-        
-        // 创建花朵
-        function createFlower() {
-            const flower = document.createElement('div');
-            flower.className = 'flower';
-            
-            // 创建玫瑰
-            const rose = document.createElement('div');
-            rose.className = 'rose';
-            
-            // 创建花瓣（多层花瓣营造立体感）
-            const petalCount = 4 + Math.floor(Math.random() * 3); // 4-6片花瓣
-            for (let i = 0; i < petalCount; i++) {
-                const petal = document.createElement('div');
-                petal.className = 'rose-petal';
-                petal.style.transform = `rotate(${i * (360 / petalCount)}deg) scale(${0.8 + i * 0.05})`;
-                petal.style.opacity = 0.7 + i * 0.05;
-                
-                // 随机花瓣颜色变化
-                const hue = 340 + Math.random() * 20; // 保持在粉红色范围内
-                const saturation = 80 + Math.random() * 20;
-                const lightness = 70 + Math.random() * 10;
-                petal.style.background = `radial-gradient(circle at 30% 30%, hsl(${hue}, ${saturation}%, ${lightness + 10}%), hsl(${hue}, ${saturation + 5}%, ${lightness - 5}%))`;
-                
-                rose.appendChild(petal);
-            }
-            
-            // 创建花中心
-            const center = document.createElement('div');
-            center.className = 'rose-center';
-            // 随机花中心颜色
-            const centerHue = 340 + Math.random() * 20;
-            center.style.background = `hsl(${centerHue}, 95%, 50%)`;
-            rose.appendChild(center);
-            
-            // 创建叶子
-            const leafCount = Math.random() > 0.3 ? 1 : 2; // 70%概率1片叶子，30%概率2片叶子
-            for (let i = 0; i < leafCount; i++) {
-                const leaf = document.createElement('div');
-                leaf.className = 'rose-leaf';
-                // 第二片叶子位置调整
-                if (i === 1) {
-                    leaf.style.transform = 'rotate(135deg)';
-                    leaf.style.left = '40px';
-                }
-                // 随机叶子颜色
-                const leafHue = 120 + Math.random() * 20; // 绿色范围
-                leaf.style.background = `hsl(${leafHue}, 70%, 40%)`;
-                rose.appendChild(leaf);
-            }
-            
-            flower.appendChild(rose);
-            
-            // 设置初始位置和样式
-            const containerRect = flowerContainer.getBoundingClientRect();
-            const left = getRandom(0, containerRect.width - 40);
-            
-            flower.style.left = `${left}px`;
-            flower.style.bottom = '-50px'; // 从容器底部外开始
-            flower.style.transform = `scale(${getRandom(0.7, 1.3)})`;
-            
-            // 创建花朵小文字
-            const flowerText = document.createElement('div');
-            flowerText.className = 'flower-text';
-            flowerText.textContent = '我爱你萌萌';
-            
-            // 随机小文字颜色
-            const textHue = 340 + Math.random() * 20;
-            const textSaturation = 80 + Math.random() * 20;
-            const textLightness = 50 + Math.random() * 10;
-            flowerText.style.color = `hsl(${textHue}, ${textSaturation}%, ${textLightness}%)`;
-            
-            // 随机小文字大小
-            const textSize = 10 + Math.random() * 4;
-            flowerText.style.fontSize = `${textSize}px`;
-            
-            // 设置小文字位置（在花朵上方偏移一点）
-            flowerText.style.left = `${left + 20}px`; // 花朵中心位置
-            flowerText.style.bottom = '0px';
-            flowerText.style.transformOrigin = 'center bottom';
-            flowerText.style.transform = `translateX(-50%) rotate(${getRandom(-10, 10)}deg)`;
-            
-            // 添加到容器
-            flowerContainer.appendChild(flowerText);
-            
-            // 动画结束后移除小文字
-            setTimeout(() => {
-                flowerText.remove();
-            }, 2000);
-            
-            return flower;
-        }
-        
-        // 创建爱心
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            
-            // 设置初始位置
-            const containerRect = flowerContainer.getBoundingClientRect();
-            const left = getRandom(0, containerRect.width);
-            const top = containerRect.height; // 从底部开始
-            
-            heart.style.left = `${left}px`;
-            heart.style.top = `${top}px`;
-            heart.style.animationDuration = `${getRandom(3, 6)}s`;
-            heart.style.opacity = getRandom(0.6, 1);
-            heart.style.transform = `rotate(45deg) scale(${getRandom(0.5, 1)})`;
-            
-            // 随机爱心颜色
-            const hue = 340 + Math.random() * 20; // 粉红色范围
-            const saturation = 80 + Math.random() * 20;
-            const lightness = 65 + Math.random() * 15;
-            const color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-            
-            heart.style.backgroundColor = color;
-            // 设置伪元素颜色
-            const style = document.createElement('style');
-            style.textContent = `
-                .heart:nth-child(odd)::before,
-                .heart:nth-child(odd)::after {
-                    background-color: ${color};
-                }
-            `;
-            heart.appendChild(style);
-            
-            // 动画结束后移除
-            heart.addEventListener('animationend', () => {
-                heart.remove();
-            });
-            
-            return heart;
-        }
-        
-        // 显示浪漫消息
-        let currentMessageIndex = 0;
-        let messageInterval;
-        
-        function showRomanticMessage() {
-            // 先淡出当前消息（如果有）
-            messageContainer.classList.remove('show');
-            
-            // 短暂延迟后显示新消息
-            setTimeout(() => {
-                messageContainer.textContent = romanticMessages[currentMessageIndex];
-                messageContainer.classList.add('show');
-                
-                // 更新索引，循环显示
-                currentMessageIndex = (currentMessageIndex + 1) % romanticMessages.length;
-            }, 500);
-        }
-        
-        // 启动消息自动轮播
-        function startMessageAutoRotation() {
-            // 先显示第一条消息
-            messageContainer.textContent = romanticMessages[currentMessageIndex];
-            messageContainer.classList.add('show');
-            currentMessageIndex = (currentMessageIndex + 1) % romanticMessages.length;
-            
-            // 设置定时器，每6秒轮播一次
-            messageInterval = setInterval(() => {
-                showRomanticMessage();
-            }, 6000);
-        }
-        
-        // 暂停消息轮播
-        function pauseMessageRotation() {
-            if (messageInterval) {
-                clearInterval(messageInterval);
-                messageInterval = null;
-            }
-        }
-        
-        // 恢复消息轮播
-        function resumeMessageRotation() {
-            if (!messageInterval) {
-                startMessageAutoRotation();
-            }
-        }
-        
-        // 播放按钮点击音效
-        function playClickSound() {
-            // 创建音频上下文和振荡器
-            try {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                const ctx = new AudioContext();
-                const oscillator = ctx.createOscillator();
-                const gainNode = ctx.createGain();
-                
-                oscillator.connect(gainNode);
-                gainNode.connect(ctx.destination);
-                
-                // 浪漫的音调
-                oscillator.frequency.value = 330; // A4
-                oscillator.type = 'sine';
-                
-                gainNode.gain.setValueAtTime(0, ctx.currentTime);
-                gainNode.gain.linearRampToValueAtTime(0.2, ctx.currentTime + 0.05);
-                gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
-                
-                oscillator.start(ctx.currentTime);
-                oscillator.stop(ctx.currentTime + 0.5);
-                
-                // 播放第二个音符增加效果
-                setTimeout(() => {
-                    const oscillator2 = ctx.createOscillator();
-                    const gainNode2 = ctx.createGain();
-                    
-                    oscillator2.connect(gainNode2);
-                    gainNode2.connect(ctx.destination);
-                    
-                    oscillator2.frequency.value = 440; // A5
-                    oscillator2.type = 'sine';
-                    
-                    gainNode2.gain.setValueAtTime(0, ctx.currentTime);
-                    gainNode2.gain.linearRampToValueAtTime(0.2, ctx.currentTime + 0.05);
-                    gainNode2.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
-                    
-                    oscillator2.start(ctx.currentTime);
-                    oscillator2.stop(ctx.currentTime + 0.3);
-                }, 150);
-            } catch (e) {
-                // 浏览器不支持音频API时静默失败
-            }
-        }
-        
-        // 送花动画
-        function sendFlowers() {
-            // 播放点击音效
-            playClickSound();
-            
-            // 清空容器
-            flowerContainer.innerHTML = '';
-            
-            // 禁用按钮防止重复点击
-            sendFlowersBtn.disabled = true;
-            sendFlowersBtn.style.opacity = 0.7;
-            sendFlowersBtn.style.transform = 'scale(0.95)'; // 按钮按下效果
-            
-            // 按钮恢复效果
-            setTimeout(() => {
-                sendFlowersBtn.style.transform = 'scale(1)';
-            }, 150);
-            
-            // 显示浪漫消息
-            showRomanticMessage();
-            
-            // 容器轻微缩放效果
-            flowerContainer.style.animation = 'pulse 0.5s ease';
-            
-            // 创建多朵花
-            const flowerCount = 15 + Math.floor(Math.random() * 10); // 15-24朵花
-            let createdFlowers = 0;
-            
-            const flowerInterval = setInterval(() => {
-                if (createdFlowers >= flowerCount) {
-                    clearInterval(flowerInterval);
-                    
-                    // 5秒后重新启用按钮，让动画可以更快地重复播放
-                    setTimeout(() => {
-                        sendFlowersBtn.disabled = false;
-                        sendFlowersBtn.style.opacity = 1;
-                    }, 5000);
-                    return;
-                }
-                
-                const flower = createFlower();
-                flowerContainer.appendChild(flower);
-                
-                // 设置动画
-                const animDuration = getRandom(4, 10);
-                const delay = getRandom(0, 0.5);
-                
-                flower.style.animation = `float ${animDuration}s ease-in forwards`;
-                flower.style.animationDelay = `${delay}s`;
-                
-                // 更自然的飘动效果
-                flower.style.transform = `scale(${getRandom(0.7, 1.3)}) rotate(${getRandom(-30, 30)}deg)`;
-                
-                // 动画结束后移除
-                flower.addEventListener('animationend', () => {
-                    flower.remove();
-                });
-                
-                // 随机创建爱心
-                if (Math.random() > 0.6) { // 增加爱心出现频率
-                    const heart = createHeart();
-                    flowerContainer.appendChild(heart);
-                }
-                
-                createdFlowers++;
-            }, 150); // 减少间隔，使动画更密集
-            
-            // 创建持续的爱心雨效果
-            const heartRainInterval = setInterval(() => {
-                const heart = createHeart();
-                flowerContainer.appendChild(heart);
-            }, 400);
-            
-            // 5秒后停止爱心雨，与按钮重新启用时间一致
-                setTimeout(() => {
-                    clearInterval(heartRainInterval);
-                    
-                    // 淡出容器效果
-                    flowerContainer.style.opacity = '0.9';
-                    // 半秒后恢复透明度
-                    setTimeout(() => {
-                        flowerContainer.style.opacity = '1';
-                    }, 500);
-                }, 5000);
-        }
-        
-        // 添加触摸反馈
-        sendFlowersBtn.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            sendFlowersBtn.style.transform = 'scale(0.95)';
-        });
-        
-        sendFlowersBtn.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            sendFlowersBtn.style.transform = 'scale(1)';
-        });
-        
-        // 绑定按钮点击事件
-        sendFlowersBtn.addEventListener('click', sendFlowers);
-        
-        // 页面加载完成后的平滑显示
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-            
-            // 启动消息自动轮播
-            startMessageAutoRotation();
-            
-            // 启动花朵自动播放
-            startAutoPlay();
-        });
-        
-        // 初始样式设置
-        document.body.style.opacity = '0';
-        document.body.style.transition = 'opacity 0.8s ease-out';
-        
-        // 添加键盘事件支持
-        document.addEventListener('keydown', (e) => {
-            // 空格键或回车键触发送花
-            if ((e.code === 'Space' || e.code === 'Enter') && !sendFlowersBtn.disabled) {
-                e.preventDefault();
-                sendFlowers();
-            }
-        });
-        
-        // 启动花朵自动播放
-        let autoPlayInterval;
-        
-        function startAutoPlay() {
-            // 初始延迟1秒后开始自动播放
-            setTimeout(() => {
-                // 触发送花动画
-                sendFlowers();
-                
-                // 设置定时器，每10秒自动播放一次，更频繁地显示花朵和文字
-                autoPlayInterval = setInterval(() => {
-                    // 确保按钮可用时才自动触发
-                    if (!sendFlowersBtn.disabled) {
-                        sendFlowers();
-                    }
-                }, 10000);
-            }, 1000);
-        }
-        
-        // 暂停花朵自动播放
-        function pauseAutoPlay() {
-            if (autoPlayInterval) {
-                clearInterval(autoPlayInterval);
-                autoPlayInterval = null;
-            }
-        }
-        
-        // 恢复花朵自动播放
-        function resumeAutoPlay() {
-            if (!autoPlayInterval) {
-                startAutoPlay();
-            }
-        }
-        
-        // 页面可见性检测
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                // 页面不可见时暂停自动播放
-                pauseMessageRotation();
-                pauseAutoPlay();
-            } else {
-                // 页面可见时恢复自动播放
-                resumeMessageRotation();
-                resumeAutoPlay();
-            }
-        });
-    </script>
 </body>
 </html>
